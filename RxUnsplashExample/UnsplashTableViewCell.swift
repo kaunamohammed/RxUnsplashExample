@@ -17,7 +17,9 @@ class UnsplashTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.tintColor = .orange
         imageView.clipsToBounds = true
-        
+        imageView.layer.cornerRadius = 5.0
+      //  imageView.layer.borderColor = UIColor.yellow.cgColor
+        // imageView.layer.borderWidth = 2.0
         return imageView
     }()
     
@@ -73,6 +75,7 @@ class UnsplashTableViewCell: UITableViewCell {
         let urlString = unsplash.urls?.raw
         guard let url = URL(string: urlString!) else { return }
         let resource = ImageResource(downloadURL: url)
+        photoView.kf.indicatorType = .activity
         photoView.kf.setImage(with: resource, options: [])
         usernameLabel.text = unsplash.user?.username
         

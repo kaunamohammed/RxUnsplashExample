@@ -14,16 +14,18 @@ class Post: Decodable {
     
 }
 
-class UnsplashResults: Object, Decodable { 
-    
+class UnsplashResults: Object, Decodable {
+        
     @objc dynamic var id: String = UUID().uuidString
     @objc dynamic var createdAt: String = ""
+    @objc dynamic var likes: Int = 0
     @objc dynamic var urls: URLS?
     @objc dynamic var user: User?
     
     enum CodingKeys: String, CodingKey {
-//        case id
+       // case id
         case createdAt = "created_at"
+        case likes
         case urls
         case user
     }

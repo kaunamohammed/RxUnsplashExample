@@ -11,13 +11,13 @@ import RealmSwift
 
 class UnsplashClient {
     
-    let apiKey = ""
+    let apiKey = "YOUR UNSPLASH API KEY"
     let session = URLSession(configuration: URLSessionConfiguration.default)
 
     func execute(query: String, callback: @escaping ([Post]) -> Void) -> URLSessionDataTask {
         
         let encodedQuery = encode(query: query) ?? ""
-        var request = URLRequest(url: URL(string: "https://api.unsplash.com/search/photos/?client_id=\(apiKey)&page=4&per_page=30&order_by=latest&query=\(encodedQuery)")!)
+        var request = URLRequest(url: URL(string: "https://api.unsplash.com/search/photos/?client_id=\(apiKey)&page=4&per_page=5&order_by=latest&query=\(encodedQuery)")!)
 
         request.httpMethod = "GET"
         request.addValue("Accept-Version", forHTTPHeaderField: "v1")

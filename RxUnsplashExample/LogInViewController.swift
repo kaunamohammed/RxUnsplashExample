@@ -24,7 +24,9 @@ class LogInViewController: UIViewController {
         SyncUser.logIn(with: creds, server: Constants.RealmConstants.AUTHURL) { (user, error) in
             
             if let _ = user {
-                self.navigationController?.pushViewController(UnsplashViewController(), animated: true)
+                let viewController =  UnsplashViewController()
+                let navigation = UINavigationController(rootViewController: viewController)
+                self.present(navigation, animated: true)
             } else if let _ = error {
                 // handle error
             }

@@ -20,9 +20,10 @@ class DataController {
             let _ = posts.map { newPost in
         
                 try! realm.write {
-                  //  realm.deleteAll()
-                    if let _ = realm.object(ofType: UnsplashResults.self, forPrimaryKey: "id") {
+                    //realm.deleteAll()
+                    if let post = realm.object(ofType: UnsplashResults.self, forPrimaryKey: "id") {
                         print("Not a new post")
+                       
                     } else {
                         
                         newPost.results.forEach {
@@ -31,12 +32,12 @@ class DataController {
                             post.createdAt = $0.createdAt
                             post.urls = $0.urls
                             post.user = $0.user
+                            post.likes = $0.likes
                             realm.add(post)
                             
                         }
                         
                     }
-                    
                     
                 }
             

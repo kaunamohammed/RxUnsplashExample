@@ -17,7 +17,7 @@ class UnsplashViewController: UIViewController {
     let unsplashPosts: Results<UnsplashResults> = {
         let syncConfig = Realm.Configuration.init(syncConfiguration: SyncConfiguration(user: SyncUser.current!, realmURL: Constants.RealmConstants.REALMURL))
         let realm = try! Realm(configuration: syncConfig)
-        return realm.objects(UnsplashResults.self)
+        return realm.objects(UnsplashResults.self).sorted(byKeyPath: "likes", ascending: false)
     }()
     
     let tableView: UITableView = {
@@ -32,9 +32,11 @@ class UnsplashViewController: UIViewController {
     let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.obscuresBackgroundDuringPresentation = false
-        controller.searchBar.placeholder = "Search github repos"
+        controller.searchBar.placeholder = "Search unsplash photos"
         return controller
     }()
+    
+    let bag = DisposeBag()
     
     var dataController: DataController!
     
@@ -47,9 +49,15 @@ class UnsplashViewController: UIViewController {
        
         tableView.dataSource = self
         setUpTableView()
+        setUpNavigationBar()
         
         dataController = DataController(api: UnsplashClient())
-        dataController.fetch(query: "girls")
+
+        query.startWith("pandas").subscribe(onNext: { [weak self] in
+            
+            self?.dataController.fetch(query: $0)
+            
+        }).disposed(by: bag)
         
         token = unsplashPosts.observe({ [weak self] (changes) in
             guard let tableView = self?.tableView else { return }
@@ -105,7 +113,7 @@ class UnsplashViewController: UIViewController {
     
     func setUpNavigationBar() {
         
-        title = "Search Unsplash Photos"
+        title = "Search"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = searchController
         definesPresentationContext = true

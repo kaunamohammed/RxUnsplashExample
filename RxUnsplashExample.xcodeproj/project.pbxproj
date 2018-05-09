@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C38CF8C406D0DD689791A964 /* Pods_RxUnsplashExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDAF26FC5C5A96F229CC42 /* Pods_RxUnsplashExample.framework */; };
-		FC166B5720A2F56A00C4360C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC166B5620A2F56A00C4360C /* LogInViewController.swift */; };
 		FC166B5920A2F59B00C4360C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC166B5820A2F59B00C4360C /* Constants.swift */; };
 		FC166B5B20A2FDCC00C4360C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC166B5A20A2FDCC00C4360C /* DataController.swift */; };
+		FC166B5D20A3291D00C4360C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC166B5C20A3291C00C4360C /* LogInViewController.swift */; };
 		FCC18FC920A2542800DC1539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC18FC820A2542800DC1539 /* AppDelegate.swift */; };
 		FCC18FCB20A2542800DC1539 /* UnsplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC18FCA20A2542800DC1539 /* UnsplashViewController.swift */; };
 		FCC18FD020A2543400DC1539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC18FCF20A2543400DC1539 /* Assets.xcassets */; };
@@ -24,9 +24,9 @@
 		09CDAF26FC5C5A96F229CC42 /* Pods_RxUnsplashExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxUnsplashExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F64ADD0A94927E64A59D8C /* Pods-RxUnsplashExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxUnsplashExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxUnsplashExample/Pods-RxUnsplashExample.release.xcconfig"; sourceTree = "<group>"; };
 		D2BFB6D44412258A0F72E47D /* Pods-RxUnsplashExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxUnsplashExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxUnsplashExample/Pods-RxUnsplashExample.debug.xcconfig"; sourceTree = "<group>"; };
-		FC166B5620A2F56A00C4360C /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		FC166B5820A2F59B00C4360C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC166B5A20A2FDCC00C4360C /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FC166B5C20A3291C00C4360C /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		FCC18FC520A2542800DC1539 /* RxUnsplashExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxUnsplashExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC18FC820A2542800DC1539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC18FCA20A2542800DC1539 /* UnsplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 				FCC18FC820A2542800DC1539 /* AppDelegate.swift */,
 				FC166B5820A2F59B00C4360C /* Constants.swift */,
 				FCC18FDA20A2562800DC1539 /* Post.swift */,
-				FC166B5620A2F56A00C4360C /* LogInViewController.swift */,
 				FCC18FCA20A2542800DC1539 /* UnsplashViewController.swift */,
+				FC166B5C20A3291C00C4360C /* LogInViewController.swift */,
 				FCC18FDE20A2933F00DC1539 /* UnsplashTableViewCell.swift */,
 				FCC18FDC20A25A3500DC1539 /* UnsplashClient.swift */,
 				FC166B5A20A2FDCC00C4360C /* DataController.swift */,
@@ -242,9 +242,9 @@
 			files = (
 				FCC18FDF20A2933F00DC1539 /* UnsplashTableViewCell.swift in Sources */,
 				FCC18FDD20A25A3500DC1539 /* UnsplashClient.swift in Sources */,
-				FC166B5720A2F56A00C4360C /* LogInViewController.swift in Sources */,
 				FCC18FDB20A2562800DC1539 /* Post.swift in Sources */,
 				FC166B5920A2F59B00C4360C /* Constants.swift in Sources */,
+				FC166B5D20A3291D00C4360C /* LogInViewController.swift in Sources */,
 				FC166B5B20A2FDCC00C4360C /* DataController.swift in Sources */,
 				FCC18FCB20A2542800DC1539 /* UnsplashViewController.swift in Sources */,
 				FCC18FC920A2542800DC1539 /* AppDelegate.swift in Sources */,
