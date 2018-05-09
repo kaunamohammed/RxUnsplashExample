@@ -1,0 +1,32 @@
+PODS:
+  - Kingfisher (4.7.0)
+  - Realm (3.3.2):
+    - Realm/Headers (= 3.3.2)
+  - Realm/Headers (3.3.2)
+  - RealmSwift (3.3.2):
+    - Realm (= 3.3.2)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.0)
+  - Realm
+  - RxCocoa (= 4.0)
+  - RxRealm
+  - RxSwift (= 4.0)
+
+SPEC CHECKSUMS:
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
+  RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+
+PODFILE CHECKSUM: 48c7a516bb63e35fa830df56ea57266e54016c90
+
+COCOAPODS: 1.4.0
